@@ -1,5 +1,6 @@
 package io.hhplus.tdd.point;
 
+import io.hhplus.tdd.history.PointHistory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ public class PointController {
     public UserPoint point(
             @PathVariable long id
     ) {
+        log.info("id:{}님의 포인트 조회", id);
         return new UserPoint(0, 0, 0);
     }
 
